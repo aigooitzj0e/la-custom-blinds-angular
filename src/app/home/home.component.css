@@ -157,4 +157,35 @@
     /*z-index: 10;*/
 }
 
-/* ====== RWD ====== */
+#contact {
+    
+    background-color: grey;
+    padding: 50px;
+}
+
+.contact-container {
+    padding-top: 50px;
+    width: 400px;
+    display: block;
+    margin: auto;
+}
+
+.contact-form input, textarea {
+    width: 400px;
+    border: none;
+    margin: 2px;
+}
+
+.contact-text {
+    text-align: center;
+    padding: 0px 300px;
+    color: black;
+}
+
+.btn {
+    background-color: #48A49D;
+}
+
+.white {
+    color: white;
+}

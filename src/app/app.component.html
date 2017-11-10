@@ -1,7 +1,14 @@
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #F8F8F8;">
 
-  <img src="/assets/img/la-logo-1.png" alt="LA Custom Blinds Logo" style="height: 50px">
+  <img class="hide-on-mobile nav-logo" src="/assets/img/la-logo-1.png" alt="LA Custom Blinds Logo" style="height: 50px">
+  <img class="show-on-mobile nav-logo" src="/assets/img/la-logo-mobile.png" alt="LA Custom Blinds Logo" style="height: 50px">
+
+  <ul class="list-show">
+      <li class="contact-info"><span class="green"><i class="fa fa-phone"></i></span>  800-254-6371</li>
+      <li class="contact-info"><span class="green"><i class="fa fa-envelope"></i></span>  help@lacustomblinds.com</li>
+  </ul>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -26,11 +33,14 @@
         <a class="nav-link" [routerLink]="['motorization']">Motorization</a>
       </li>
       <li class="nav-item ml-2">
-        <a class="nav-link" [routerLink]="['appointment']">Schedule Appointment</a>
+        <a class="nav-link" [routerLink]="['appointment']">Appointment</a>
       </li>
       <li class="nav-item ml-2">
         <a class="nav-link" [routerLink]="['about']">About Us</a>
       </li>
+
+      <li class="contact-info"><span class="green"><i class="fa fa-phone"></i></span>  800-254-6371</li>
+      <li class="contact-info"><span class="green"><i class="fa fa-envelope"></i></span>  help@lacustomblinds.com</li>
     </ul>
   </div>
 </nav>
@@ -60,7 +70,7 @@
                         <td><input type="submit" value="Submit"></td>
                     </tr>
                 </form>
-                </table>
+            </table>
 
                 <ul class="modal-contact-info">
                     <li><i class="fa fa-phone"></i>  800-254-6371</li>
@@ -71,7 +81,7 @@
     </mat-sidenav>
 
     <div class="example-sidenav-content">
-        <button class="sidenav-btn" type="button" mat-button (click)="sidenav.open()">
+        <button class="sidenav-btn btn btn-lg btn-default button-glow" type="button" mat-button (click)="sidenav.open()">
             Free
         </button>
     </div>

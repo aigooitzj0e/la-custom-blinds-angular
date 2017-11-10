@@ -68,3 +68,31 @@
 .modal-contact-info li {
     list-style: none;
 }
+
+.contact-info {
+    margin-top: 7px;
+    margin-left: 20px;
+}
+
+.green {
+    color: #48A49D;
+}
+
+.list-show {
+    display: none;
+}
+
+
+
+
+@keyframes glowing {
+  0% { box-shadow: 0 0 -10px red; }
+  40% { box-shadow: 0 0 30px red; }
+  60% { box-shadow: 0 0 30px red; }
+  100% { box-shadow: 0 0 -10px red; }
+}
+
+.button-glow {
+  animation: glowing 3000ms infinite;
+  color: white;
+}
