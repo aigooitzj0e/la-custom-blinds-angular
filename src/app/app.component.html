@@ -1,51 +1,41 @@
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #F8F8F8;">
 
-  <img class="hide-on-mobile nav-logo" src="/assets/img/la-logo-1.png" alt="LA Custom Blinds Logo" style="height: 50px">
-  <img class="show-on-mobile nav-logo" src="/assets/img/la-logo-mobile.png" alt="LA Custom Blinds Logo" style="height: 50px">
-
-  <ul class="list-show">
-      <li class="contact-info"><span class="green"><i class="fa fa-phone"></i></span>  800-254-6371</li>
-      <li class="contact-info"><span class="green"><i class="fa fa-envelope"></i></span>  help@lacustomblinds.com</li>
-  </ul>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active ml-5">
-        <a class="nav-link" [routerLink]="['home']">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item dropdown ml-2">
-        <a class="nav-link dropdown-toggle" [routerLink]="['products']" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Products
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+<nav>
+    <mat-menu class="n-collapse" #appMenu="matMenu">
+        <div class="m-container">
+            <button class="m-btn" mat-menu-item [routerLink]="['home']"> Home </button>
+            <button class="m-btn" mat-menu-item [routerLink]="['products']"> Products </button>
+            <button class="m-btn" mat-menu-item [routerLink]="['motorization']"> Motorization </button>
+            <button class="m-btn" mat-menu-item [routerLink]="['appointment']"> Appointments </button>
+            <button class="m-btn" mat-menu-item [routerLink]="['about']"> About Us </button>
         </div>
-      </li>
-      <li class="nav-item ml-2">
-        <a class="nav-link" [routerLink]="['motorization']">Motorization</a>
-      </li>
-      <li class="nav-item ml-2">
-        <a class="nav-link" [routerLink]="['appointment']">Appointment</a>
-      </li>
-      <li class="nav-item ml-2">
-        <a class="nav-link" [routerLink]="['about']">About Us</a>
-      </li>
 
-      <li class="contact-info"><span class="green"><i class="fa fa-phone"></i></span>  800-254-6371</li>
-      <li class="contact-info"><span class="green"><i class="fa fa-envelope"></i></span>  help@lacustomblinds.com</li>
+    </mat-menu>
+
+    <button class="n-collapse-btn" mat-icon-button [matMenuTriggerFor]="appMenu">
+        <mat-icon><i class="fa fa-bars"></i></mat-icon>
+    </button>
+
+    <img class="hide-on-mobile nav-logo" src="/assets/img/la-logo-1.png" alt="LA Custom Blinds Logo" style="height: 50px">
+    <img class="show-on-mobile nav-logo" src="/assets/img/la-logo-mobile.png" alt="LA Custom Blinds Logo" style="height: 50px">
+    <ul class="n-list">
+        <li class="n-item" [routerLink]="['home']">Home</li>
+        <li class="n-item" [routerLink]="['products']">Products</li>
+        <li class="n-item" [routerLink]="['motorization']">Motorization</li>
+        <li class="n-item" [routerLink]="['appointment']">Appointments</li>
+        <li class="n-item" [routerLink]="['about']">About</li>
+
     </ul>
-  </div>
+    <a class="contact-info f-left"><span class="green"><i class="fa fa-phone"></i></span>  800-254-6371</a>
+    <a class="contact-info"><span class="green"><i class="fa fa-envelope"></i></span>  help@lacustomblinds.com</a>
 </nav>
 
 
+<div class="example-sidenav-content">
+    <button class="sidenav-btn btn btn-lg btn-default button-glow" type="button" mat-button (click)="sidenav.open()">
+        Free
+    </button>
+</div>
 
 <mat-sidenav-container class="test example-container">
     <mat-sidenav #sidenav class="example-sidenav">
@@ -80,17 +70,9 @@
             </div>
     </mat-sidenav>
 
-    <div class="example-sidenav-content">
-        <button class="sidenav-btn btn btn-lg btn-default button-glow" type="button" mat-button (click)="sidenav.open()">
-            Free
-        </button>
-    </div>
+
+    <router-outlet></router-outlet>
+
+
 
 </mat-sidenav-container>
-
-
-
-
-
-
-<router-outlet></router-outlet>
