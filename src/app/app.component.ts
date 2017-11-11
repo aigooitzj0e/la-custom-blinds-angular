@@ -12,17 +12,11 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
 })
 export class AppComponent {
 
-  state: string = 'void';
+
 
   constructor() {}
 
-  isCollapsed: boolean = false;
 
-  collapsed(event: any): void {
-    console.log(event);
-  }
 
-  expanded(event: any): void {
-    console.log(event);
-  }
+
 }
